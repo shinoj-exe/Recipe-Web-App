@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">MEALS</a>
+        </nav>
+
+        <div class="search">
+            <input type="text" placeholder="chocolate,potato...etc" id="search-term" class="search-text">
+            <button class="searchBtn" id="search"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="fav-container">
+            <h3>Favorite Meals</h3>
+            <ul class="fav-meals">
+                <li class="demoFav">
+                    <button class="remove">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <img src="img/meatballs.jpg" alt="MeatBalls"><span>MeatBalls</span>
+                </li>
+                <li class="demoFav">
+                    <button class="remove">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <img src="img/icecream.jpg" alt="icecream"><span>IceCream</span>
+                </li>
+                <li class="demoFav">
+                    <button class="remove">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <img src="img/cherryCake.jpg" alt="CherryCake"><span>Cake</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="meals" id="meals">
+        </div>
+
+        <div class="generate">
+            <button class="new-btn">Show me another Food Item!</button>
+        </div>
+    </div>
+
+    <div class="popup-container hidden" id="meal-popup">
+        <div class="overlay"></div>
+        <div class="popup">
+            <button class="close-popup">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="meal-info" id="meal-info">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

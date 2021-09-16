@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    transition: all 0.1s ease-in;
+}
+body{
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #d3e1f8;
+    min-height: 100vh;
+}
+img{
+    max-width: 100%;
+}
+.container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+nav{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 1rem;
+    padding-top: 0.5rem;
+}
+.logo{
+    text-decoration: none;
+    font-family: "Montserrat";
+    color: #114a99c4;
+    font-size: 50px;
+    font-weight: 800;
+}
+.search{
+    display: flex;
+    padding: 0rem 0 1rem;
+}
+.search button{
+    cursor: pointer;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 10px 0 rgba( 31, 38, 135, 0.37 );
+    color: rgb(24, 23, 23);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+.search-text{
+    padding: 0.5rem 1rem;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 17px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.search-text:focus{
+    outline: none;
+}
+.fav-container{
+    padding: 0 1rem;
+    margin: 0 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.43);
+    box-shadow: 0 8px 25px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 17px );
+    -webkit-backdrop-filter: blur( 17px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: #313a46;
+}
+.fav-container h3{
+    font-size:20px;
+    letter-spacing: 0.5px;
+}
+.fav-meals{
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.fav-meals li{
+    cursor: pointer;
+    width: 100px;
+    margin: 0.5rem 1rem;
+    position: relative;
+}
+.fav-meals .remove{
+    position: absolute;
+    right: 0px;top: -10px;
+    cursor: pointer;
+    background-color: #3461afda;
+    color: white;
+    border: 0;
+    font-size: 1rem;
+}
+.fav-meals li img{
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 10px 0.5px #333333 ;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+}
+.fav-meals li span{
+    letter-spacing: 0.2px;
+    font-size: 0.9rem;
+}
+
+.meals{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.meal{
+    cursor: pointer;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 1.5rem;
+    margin-bottom: 0;
+    background: rgba( 255, 255, 255, 0.45 );
+    border: 0.5px solid rgba( 255, 255, 255, 0.18 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    overflow: hidden;
+}
+.meal:hover{
+    transform: scale(1.05);
+}
+
+.meal-header{
+    position: relative;
+}
+.meal-header .random{
+    position: absolute;
+    top: 1rem;
+    background-color: white;
+    box-shadow:0 2px 12px 3px rgba(0, 0, 0,0.8);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0 3px 3px 0;
+}
+.meal:hover .random{
+    background-color: #114a99;
+    color: white;
+}
+
+.meal-header img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    
+}
+.meal-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.meal-body h4{
+    font-size: 18px;
+    color: #184ca7da;
+    margin: 0;
+    width: 80%;
+}
+.meal-body{
+    position: relative;
+}
+.meal-body .btn{
+    position: absolute;
+    cursor: pointer;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: rgb(79, 90, 102);
+}
+.meal-body .fav-btn{
+    right: 2.2rem;
+}
+.meal-body .fav-btn.active{
+    color: crimson;
+}
+.generate{
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.new-btn{
+    cursor: pointer;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    color: white;
+    border: 0.5px solid rgba( 255, 255, 255, 0.8 );
+    box-shadow: 0 8px 25px 0 rgba( 31, 38, 135, 0.37 );
+    background-color: #184ca7da;
+}
+.new-btn:hover{
+    background-color: #184ca7;
+}
+.popup-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+.hidden{
+    display: none;
+}
+.popup{
+    background: #d3e1f8;
+    box-shadow: 0 8px 25px 0 rgba( 0, 0, 0, 0.9);
+    height: 80%;
+    padding:0 2rem;
+    margin: 0 10px;
+    max-width: 800px;
+    border-radius: 15px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    overflow-y: scroll;
+}
+.popup h1{
+    text-align: center;
+    font-family: "Montserrat";
+    color: #114a99;
+}
+.popup h3,.popup p{
+    color: #313a46;
+}
+.meal-info img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 350px;
+    border-radius: 5px;
+}
+.popup .close-popup{
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    top: 1rem;
+    right: 1rem;
+}
